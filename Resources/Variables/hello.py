@@ -1,2 +1,7 @@
 print("hello world")
 print("hello git")
+print("just to learn again")
+print("beauty of the awareness")
+print("sacred inner self")
+print("look at where you dont want to look")
+print("there is only habit within us")
