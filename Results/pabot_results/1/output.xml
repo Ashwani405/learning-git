@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-06-18T13:32:27.986311" rpa="false" schemaversion="5">
+<suite id="s1" name="User Registration Tests" source="C:\Users\Friends\PycharmProjects\DemoWebShop\tests\User_Registration_Tests.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-06-18T13:32:28.543974" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
+<arg>${None}</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-18T13:32:28.543260" elapsed="2.867501"/>
+</kw>
+<test id="s1-t1" name="Login Logout Test" line="19">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:32:31.414304" level="INFO">Opening url 'https://demowebshop.tricentis.com'</msg>
+<arg>${demo_web_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-18T13:32:31.413549" elapsed="5.790724"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-18T13:32:37.204695" elapsed="0.197628"/>
+</kw>
+<arg>Go To</arg>
+<arg>${demo_web_url}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-06-18T13:32:31.412817" elapsed="5.989907"/>
+</kw>
+<kw name="Login logout verification" owner="User_Registration_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:32:37.406960" level="INFO">Clicking element '//a[text()='Log in']'.</msg>
+<arg>${login_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:32:37.404698" elapsed="0.925661"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:32:38.331967" level="INFO">Typing text 'ashwaniverma1010@gmail.com' into text field 'id:Email'.</msg>
+<arg>${fix_email}</arg>
+<arg>${OLD EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:32:38.330992" elapsed="0.267289"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:32:38.599523" level="INFO">Typing text 'vedant' into text field 'id:Password'.</msg>
+<arg>${fix_password}</arg>
+<arg>${OLD PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:32:38.598763" elapsed="0.195993"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:32:38.795571" level="INFO">Clicking element '//input[@value='Log in']'.</msg>
+<arg>${login_button_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:32:38.795075" elapsed="1.186986"/>
+</kw>
+<arg>${registered_email}</arg>
+<arg>${registered_password}</arg>
+<status status="PASS" start="2025-06-18T13:32:37.403418" elapsed="2.578913"/>
+</kw>
+<kw name="Wait Until Successfully Logged" owner="User_Registration_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${logout_button_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-18T13:32:39.984038" elapsed="0.063392"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:32:40.048569" level="INFO">Clicking element '//a[text()='Log out']'.</msg>
+<arg>${logout_button_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:32:40.047936" elapsed="1.130350"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-18T13:32:41.178893" elapsed="0.054807"/>
+</kw>
+<status status="PASS" start="2025-06-18T13:32:39.982728" elapsed="1.251154"/>
+</kw>
+<tag>Regression</tag>
+<tag>TC02</tag>
+<status status="PASS" start="2025-06-18T13:32:31.411689" elapsed="9.822397"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-18T13:32:41.234946" elapsed="3.509352"/>
+</kw>
+<status status="PASS" start="2025-06-18T13:32:28.040368" elapsed="16.704322"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+<stat pass="1" fail="0" skip="0">TC02</stat>
+</tag>
+<suite>
+<stat name="User Registration Tests" id="s1" pass="1" fail="0" skip="0">User Registration Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-18T13:32:28.071134" level="WARN">Error in file 'C:\Users\Friends\PycharmProjects\DemoWebShop\Common_Libraries\Common_utilities.resource' on line 12: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-06-18T13:32:28.071498" level="WARN">Error in file 'C:\Users\Friends\PycharmProjects\DemoWebShop\Common_Libraries\Common_utilities.resource' on line 17: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-06-18T13:32:28.071731" level="WARN">Error in file 'C:\Users\Friends\PycharmProjects\DemoWebShop\Common_Libraries\Common_utilities.resource' on line 22: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-06-18T13:32:28.072160" level="WARN">Error in file 'C:\Users\Friends\PycharmProjects\DemoWebShop\Common_Libraries\Common_utilities.resource' on line 27: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

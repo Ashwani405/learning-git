@@ -1,0 +1,6 @@
+Books_locator = "//li[@class='inactive']/a[contains(text(),'Books')]"
+health_book_cart_locator = "//input[contains(@onclick,'catalog/13/1/1')]"
+added_product_message_locator = "//p[text()='The product has been added to your ']"
+shoping_cart_locator = "//span[text()='Shopping cart']"
+product_quantity_locator = "//input[@value='1']"
+total_price_locator = "//span[text()='Total:']/following-sibling::span"

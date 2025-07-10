@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-06-19T19:56:29.228165" rpa="false" schemaversion="5">
+<suite id="s1" name="User Registration Tests" source="C:\Users\Friends\PycharmProjects\DemoWebShop\Tests\User_Registration_Tests.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-06-19T19:56:29.778185" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
+<arg>${None}</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-19T19:56:29.777243" elapsed="2.403817"/>
+</kw>
+<test id="s1-t1" name="Add to cart product verification" line="24">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:56:32.187789" level="INFO">Opening url 'https://demowebshop.tricentis.com'</msg>
+<arg>${demo_web_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-19T19:56:32.186969" elapsed="1.819940"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-19T19:56:34.009721" elapsed="3.204441"/>
+</kw>
+<arg>Go To</arg>
+<arg>${demo_web_url}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-06-19T19:56:32.184376" elapsed="5.030142"/>
+</kw>
+<kw name="Login verification" owner="User_Registration_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:56:37.224949" level="INFO">Clicking element '//a[text()='Log in']'.</msg>
+<arg>${login_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:56:37.219763" elapsed="1.026350"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:56:38.247916" level="INFO">Typing text 'ashwaniverma1010@gmail.com' into text field 'id:Email'.</msg>
+<arg>${login_email}</arg>
+<arg>${OLD EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:56:38.246877" elapsed="0.244292"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:56:38.491999" level="INFO">Typing text 'vedant' into text field 'id:Password'.</msg>
+<arg>${login_password}</arg>
+<arg>${OLD PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:56:38.491513" elapsed="0.129499"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:56:38.621808" level="INFO">Clicking element '//input[@value='Log in']'.</msg>
+<arg>${login_button_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:56:38.621432" elapsed="1.543561"/>
+</kw>
+<arg>${registered_email}</arg>
+<arg>${registered_password}</arg>
+<status status="PASS" start="2025-06-19T19:56:37.215164" elapsed="2.950275"/>
+</kw>
+<kw name="Add product to cart test" owner="User_Registration_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:56:40.173384" level="INFO">Clicking element '//li[@class='inactive']/a[contains(text(),'Books')]'.</msg>
+<arg>${Books_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:56:40.172499" elapsed="1.674254"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:56:41.848646" level="INFO">Clicking element '//input[contains(@onclick,'catalog/13/1/1')]'.</msg>
+<arg>${health_book_cart_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:56:41.847608" elapsed="0.326200"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${added_product_message_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T19:56:42.174857" elapsed="0.552354"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${shoping_cart_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-06-19T19:56:42.728292" elapsed="0.332958"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:56:43.062316" level="INFO">Clicking element '//span[text()='Shopping cart']'.</msg>
+<arg>${shoping_cart_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:56:43.061750" elapsed="1.136210"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${product_quantity_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T19:56:44.204961" elapsed="0.056971"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${total_price_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T19:56:44.262437" elapsed="0.035540"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:56:40.169940" elapsed="4.128265"/>
+</kw>
+<tag>smoke</tag>
+<tag>TC03</tag>
+<status status="PASS" start="2025-06-19T19:56:32.181757" elapsed="12.117799"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-19T19:56:44.301866" elapsed="2.308751"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:56:29.251326" elapsed="17.359582"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+<stat pass="1" fail="0" skip="0">TC03</stat>
+</tag>
+<suite>
+<stat name="User Registration Tests" id="s1" pass="1" fail="0" skip="0">User Registration Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-19T19:56:29.327494" level="WARN">Error in file 'C:\Users\Friends\PycharmProjects\DemoWebShop\Common_Libraries\Common_utilities.resource' on line 12: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-06-19T19:56:29.328744" level="WARN">Error in file 'C:\Users\Friends\PycharmProjects\DemoWebShop\Common_Libraries\Common_utilities.resource' on line 17: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-06-19T19:56:29.330123" level="WARN">Error in file 'C:\Users\Friends\PycharmProjects\DemoWebShop\Common_Libraries\Common_utilities.resource' on line 22: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-06-19T19:56:29.330625" level="WARN">Error in file 'C:\Users\Friends\PycharmProjects\DemoWebShop\Common_Libraries\Common_utilities.resource' on line 27: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

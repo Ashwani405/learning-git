@@ -1,0 +1,6 @@
+contact_us_locator  =  "//a[text()='Contact us']"
+contact_fullname_locator = "id:FullName"
+contact_email_locator = "id:Email"
+enquiry_textbox_locator = "id:Enquiry"
+contact_submit_locator = "name:send-email"
+enquiry_successfull_locator = "//div[contains(text(),'Your enquiry has been successfully sent')]"

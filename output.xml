@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-06-18T13:30:15.210101" rpa="false" schemaversion="5">
+<suite id="s1" name="User Registration Tests" source="C:\Users\Friends\PycharmProjects\DemoWebShop\Tests\User_Registration_Tests.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-06-18T13:30:15.710258" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
+<arg>${None}</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-18T13:30:15.709920" elapsed="2.068932"/>
+</kw>
+<test id="s1-t1" name="Registration functionality test" line="10">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:17.785872" level="INFO">Opening url 'https://demowebshop.tricentis.com'</msg>
+<arg>${demo_web_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-18T13:30:17.785383" elapsed="4.958558"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-18T13:30:22.744578" elapsed="0.095607"/>
+</kw>
+<arg>Go To</arg>
+<arg>${demo_web_url}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-06-18T13:30:17.784679" elapsed="5.055711"/>
+</kw>
+<kw name="Generate And Return Unique Name" owner="Common_utilities">
+<kw name="Generate Unique Date Without Special Characters" owner="Common_utilities">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-06-18T13:30:22.847572" level="INFO">${Date} = 2025-06-18 13:30:22.847</msg>
+<var>${Date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-06-18T13:30:22.846916" elapsed="0.000746"/>
+</kw>
+<kw name="Remove String" owner="String">
+<msg time="2025-06-18T13:30:22.848740" level="INFO">${Modified_Date} = 20250618133022847</msg>
+<var>${Modified_Date}</var>
+<arg>${Date}</arg>
+<arg>${SPACE}</arg>
+<arg>:</arg>
+<arg>.</arg>
+<arg>-</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2025-06-18T13:30:22.848129" elapsed="0.000683"/>
+</kw>
+<return>
+<value>${Modified_Date}</value>
+<status status="PASS" start="2025-06-18T13:30:22.849053" elapsed="0.000209"/>
+</return>
+<msg time="2025-06-18T13:30:22.849773" level="INFO">${Modified_Date} = 20250618133022847</msg>
+<var>${Modified_Date}</var>
+<status status="PASS" start="2025-06-18T13:30:22.843746" elapsed="0.006117"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-06-18T13:30:22.850530" level="INFO">${Unique_Name} = Ashwani20250618133022847</msg>
+<var>${Unique_Name}</var>
+<arg>Ashwani${Modified_Date}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-06-18T13:30:22.850159" elapsed="0.000423"/>
+</kw>
+<return>
+<value>${Unique_Name}</value>
+<status status="PASS" start="2025-06-18T13:30:22.850694" elapsed="0.000127"/>
+</return>
+<msg time="2025-06-18T13:30:22.851161" level="INFO">${first name input} = Ashwani20250618133022847</msg>
+<var>${first name input}</var>
+<status status="PASS" start="2025-06-18T13:30:22.841541" elapsed="0.009678"/>
+</kw>
+<kw name="Generate And Return Unique Last Name" owner="Common_utilities">
+<kw name="Generate Unique Date Without Special Characters" owner="Common_utilities">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-06-18T13:30:22.853596" level="INFO">${Date} = 2025-06-18 13:30:22.853</msg>
+<var>${Date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-06-18T13:30:22.853268" elapsed="0.000384"/>
+</kw>
+<kw name="Remove String" owner="String">
+<msg time="2025-06-18T13:30:22.854377" level="INFO">${Modified_Date} = 20250618133022853</msg>
+<var>${Modified_Date}</var>
+<arg>${Date}</arg>
+<arg>${SPACE}</arg>
+<arg>:</arg>
+<arg>.</arg>
+<arg>-</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2025-06-18T13:30:22.853851" elapsed="0.000600"/>
+</kw>
+<return>
+<value>${Modified_Date}</value>
+<status status="PASS" start="2025-06-18T13:30:22.854674" elapsed="0.000107"/>
+</return>
+<msg time="2025-06-18T13:30:22.855090" level="INFO">${Modified_Date} = 20250618133022853</msg>
+<var>${Modified_Date}</var>
+<status status="PASS" start="2025-06-18T13:30:22.852587" elapsed="0.002577"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-06-18T13:30:22.855663" level="INFO">${Unique_Name} = Verma20250618133022853</msg>
+<var>${Unique_Name}</var>
+<arg>Verma${Modified_Date}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-06-18T13:30:22.855369" elapsed="0.000351"/>
+</kw>
+<return>
+<value>${Unique_Name}</value>
+<status status="PASS" start="2025-06-18T13:30:22.855873" elapsed="0.000139"/>
+</return>
+<msg time="2025-06-18T13:30:22.857295" level="INFO">${last name input} = Verma20250618133022853</msg>
+<var>${last name input}</var>
+<status status="PASS" start="2025-06-18T13:30:22.851840" elapsed="0.005563"/>
+</kw>
+<kw name="Generate And Return Unique Email" owner="Common_utilities">
+<kw name="Generate Unique Date Without Special Characters" owner="Common_utilities">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-06-18T13:30:22.866274" level="INFO">${Date} = 2025-06-18 13:30:22.866</msg>
+<var>${Date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-06-18T13:30:22.865619" elapsed="0.000827"/>
+</kw>
+<kw name="Remove String" owner="String">
+<msg time="2025-06-18T13:30:22.867786" level="INFO">${Modified_Date} = 20250618133022866</msg>
+<var>${Modified_Date}</var>
+<arg>${Date}</arg>
+<arg>${SPACE}</arg>
+<arg>:</arg>
+<arg>.</arg>
+<arg>-</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2025-06-18T13:30:22.866922" elapsed="0.000964"/>
+</kw>
+<return>
+<value>${Modified_Date}</value>
+<status status="PASS" start="2025-06-18T13:30:22.868137" elapsed="0.000168"/>
+</return>
+<msg time="2025-06-18T13:30:22.868762" level="INFO">${Modified_Date} = 20250618133022866</msg>
+<var>${Modified_Date}</var>
+<status status="PASS" start="2025-06-18T13:30:22.862164" elapsed="0.006692"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-06-18T13:30:22.870122" level="INFO">${Unique_Name} = Email20250618133022866@mail.com</msg>
+<var>${Unique_Name}</var>
+<arg>Email${Modified_Date}@mail.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-06-18T13:30:22.869263" elapsed="0.000962"/>
+</kw>
+<return>
+<value>${Unique_Name}</value>
+<status status="PASS" start="2025-06-18T13:30:22.870419" elapsed="0.000251"/>
+</return>
+<msg time="2025-06-18T13:30:22.871017" level="INFO">${email input} = Email20250618133022866@mail.com</msg>
+<var>${email input}</var>
+<status status="PASS" start="2025-06-18T13:30:22.859463" elapsed="0.011626"/>
+</kw>
+<kw name="Enter register information" owner="User_Registration_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:22.873292" level="INFO">Clicking element '//a[text()='Register']'.</msg>
+<arg>${register_link_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:22.872544" elapsed="0.946693"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:23.820445" level="INFO">Clicking element 'id:gender-male'.</msg>
+<arg>${gender_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:23.819769" elapsed="0.145209"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:23.965507" level="INFO">Typing text 'Ashwani20250618133022847' into text field 'id:FirstName'.</msg>
+<arg>${first_name_locator}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:23.965199" elapsed="0.206579"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:24.172280" level="INFO">Typing text 'Verma20250618133022853' into text field 'id:LastName'.</msg>
+<arg>${last_name_locator}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:24.171985" elapsed="0.174193"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:24.346695" level="INFO">Typing text 'Email20250618133022866@mail.com' into text field 'id:Email'.</msg>
+<arg>${email_locator}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:24.346384" elapsed="0.184495"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:24.531502" level="INFO">Typing text 'kabeersaheb' into text field 'id:Password'.</msg>
+<arg>${password_locator}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:24.531138" elapsed="0.139995"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:24.671644" level="INFO">Typing text 'kabeersaheb' into text field 'id:ConfirmPassword'.</msg>
+<arg>${confirm_password_locator}</arg>
+<arg>${CONFIRM PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:24.671354" elapsed="0.149962"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:24.822134" level="INFO">Clicking element 'id:register-button'.</msg>
+<arg>${register_button_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:24.821688" elapsed="1.662787"/>
+</kw>
+<arg>${first name input}</arg>
+<arg>${last name input}</arg>
+<arg>${email input}</arg>
+<arg>${password}</arg>
+<arg>${confirm_password}</arg>
+<status status="PASS" start="2025-06-18T13:30:22.871559" elapsed="3.613144"/>
+</kw>
+<kw name="Wait until Register Successfull" owner="User_Registration_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${register_successful_text_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-18T13:30:26.485900" elapsed="0.046422"/>
+</kw>
+<status status="PASS" start="2025-06-18T13:30:26.485305" elapsed="0.047157"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:26.533197" level="INFO">Clicking element '//a[text()='Log out']'.</msg>
+<arg>${logout_button_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:26.532899" elapsed="1.415368"/>
+</kw>
+<tag>Regression</tag>
+<tag>TC01</tag>
+<status status="PASS" start="2025-06-18T13:30:17.779399" elapsed="10.169406"/>
+</test>
+<test id="s1-t2" name="Login Logout Test" line="19">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:27.952307" level="INFO">Opening url 'https://demowebshop.tricentis.com'</msg>
+<arg>${demo_web_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-18T13:30:27.951989" elapsed="0.618686"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-18T13:30:28.571186" elapsed="0.013237"/>
+</kw>
+<arg>Go To</arg>
+<arg>${demo_web_url}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-06-18T13:30:27.951424" elapsed="0.633262"/>
+</kw>
+<kw name="Login logout verification" owner="User_Registration_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:28.586422" level="INFO">Clicking element '//a[text()='Log in']'.</msg>
+<arg>${login_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:28.586090" elapsed="0.734178"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:29.326328" level="INFO">Typing text 'ashwaniverma1010@gmail.com' into text field 'id:Email'.</msg>
+<arg>${fix_email}</arg>
+<arg>${OLD EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:29.323013" elapsed="0.185327"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:29.509480" level="INFO">Typing text 'vedant' into text field 'id:Password'.</msg>
+<arg>${fix_password}</arg>
+<arg>${OLD PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:29.508940" elapsed="0.153370"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:29.662829" level="INFO">Clicking element '//input[@value='Log in']'.</msg>
+<arg>${login_button_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:29.662556" elapsed="1.088514"/>
+</kw>
+<arg>${registered_email}</arg>
+<arg>${registered_password}</arg>
+<status status="PASS" start="2025-06-18T13:30:28.585397" elapsed="2.165870"/>
+</kw>
+<kw name="Wait Until Successfully Logged" owner="User_Registration_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${logout_button_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-18T13:30:30.752336" elapsed="0.048289"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T13:30:30.801478" level="INFO">Clicking element '//a[text()='Log out']'.</msg>
+<arg>${logout_button_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T13:30:30.801001" elapsed="1.183962"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-18T13:30:31.985320" elapsed="0.048848"/>
+</kw>
+<status status="PASS" start="2025-06-18T13:30:30.751826" elapsed="1.282483"/>
+</kw>
+<tag>Regression</tag>
+<tag>TC02</tag>
+<status status="PASS" start="2025-06-18T13:30:27.949778" elapsed="4.084941"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-18T13:30:32.036553" elapsed="2.314735"/>
+</kw>
+<status status="PASS" start="2025-06-18T13:30:15.211883" elapsed="19.139514"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Regression</stat>
+<stat pass="1" fail="0" skip="0">TC01</stat>
+<stat pass="1" fail="0" skip="0">TC02</stat>
+</tag>
+<suite>
+<stat name="User Registration Tests" id="s1" pass="2" fail="0" skip="0">User Registration Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-18T13:30:15.253193" level="WARN">Error in file 'C:\Users\Friends\PycharmProjects\DemoWebShop\Common_Libraries\Common_utilities.resource' on line 12: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-06-18T13:30:15.253969" level="WARN">Error in file 'C:\Users\Friends\PycharmProjects\DemoWebShop\Common_Libraries\Common_utilities.resource' on line 17: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-06-18T13:30:15.254365" level="WARN">Error in file 'C:\Users\Friends\PycharmProjects\DemoWebShop\Common_Libraries\Common_utilities.resource' on line 22: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-06-18T13:30:15.254796" level="WARN">Error in file 'C:\Users\Friends\PycharmProjects\DemoWebShop\Common_Libraries\Common_utilities.resource' on line 27: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

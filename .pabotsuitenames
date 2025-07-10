@@ -1,0 +1,6 @@
+datasources:f63230bd160c70502c82ee6b806df5bbb1d29b20
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+suitesfrom:no-suites-from-option
+file:22e5bf2a8ffe9dca3204404d96de6af1d8b6abbe
+--test User Registration Tests.Registration functionality test
+--test User Registration Tests.Login Logout Test
