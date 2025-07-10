@@ -29,6 +29,7 @@ Newsletter subscription
 Wishlist Functionality
         [Tags]    TC_007   sanity
         Login verification     ${registered_email}    ${registered_password}
+        Wait Until Element Is Visible    locator
 
 # wishlist me kaise add kare kisi product ko
 # checkout process, payment method ko samjhna hai ache se
